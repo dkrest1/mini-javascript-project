@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media screen and (max-width: 31.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+
+    background-color: #f3f4f5;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-image: linear-gradient(90deg, #fff 0%, #fff 60%, transparent 40%),
+                      url(../img/img-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    width: 60rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .3);
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+.alert {
+   width: 60%;
+   background-color: red;
+   color: #fff;
+   font-size: 1.4rem;
+   text-align: center;
+   padding: .6rem 1rem;
+}
+
+#form {
+    overflow: hidden;
+    width: 60%;
+    padding: 4rem 4rem;
+    font-size: 1.4rem;
+}
+
+.header {
+    text-align: center;
+    color: #9b59b6;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 22.5em) {
+    .header h2{
+      font-size: 1.8rem;
+    }
+}
+
+.social-list {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 2rem 0;
+}
+
+.social-item {
+  margin-right: .8rem;
+}
+
+.social-link {
+   text-decoration: none;
+   font-size: 1.4rem;
+   border: 2px solid #9b59b6;
+   color: #9b59b6;
+   border-radius: 50%;
+   transition: all .2s;
+}
+
+.social-link:hover {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+.fa {
+   height: 2rem;
+   width: 2rem;
+}
+
+.text {
+    text-align: center;
+    color: #222;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: .8rem;
+}
+
+ .input-design {
+    padding: .8rem 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+    background-color: #f3f4f5;
+}
+
+.form-group.error .input-design {
+    border-color: red;
+}
+
+.input-design:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.form-group .fa-check-circle,
+.form-group .fa-exclamation-circle {
+    visibility: hidden;
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+}
+
+.form-group.success .fa-check-circle{
+    visibility: visible;
+    color: green;
+}
+
+.form-group.error .fa-exclamation-circle{
+    visibility: visible;
+    color: red;
+}
+
+.form-group.success .input-design {
+    border: 2px solid green;
+}
+
+.form-group small {
+    color: red;
+    visibility: hidden;
+}
+ 
+.form-group.error small{
+    display: block;
+    visibility: visible;
+    margin-top: .4rem;
+}
+
+
+
+.form-group-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#terms {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    height: 1.6rem;
+    width: 1.6rem;
+    border: 2px solid #777;
+    border-radius: 3px;
+    transition: all .2s;
+}
+
+#terms::after {
+    content: "\2713";
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    display: block;
+    padding: .1rem;
+    text-align: center;
+   
+    color: #fff;
+}
+
+
+@media screen and (max-width: 35.94em) {
+   #terms::after {
+       top: 4px;
+       left: 1px;
+   }
+}
+
+@media screen and (max-width: 31.25em) {
+    #terms::after {
+        top: -3px;
+        left: 1px;
+    }
+}
+
+#terms:checked {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+.terms-text {
+    display: inline-block;
+    margin-left: 1.2rem;
+    font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 35.94em) {
+    .terms-text {
+        font-size: 1.1rem;
+    }
+   
+}
+
+.terms-link {
+    text-decoration: none;
+    color: #9b59b6;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 3rem;
+}
+
+.button {
+    border: 2px solid #9b59b6;
+    color: #9b59b6;
+    border-radius: 6px;
+    background-color: transparent;
+    padding: .6rem 4rem;
+    transition: all .2s;
+}
+
+@media screen and (max-width: 35.94em) {
+    .button {
+       padding: .6rem 3rem; 
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    .button {
+        padding: .6rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 22.5em) {
+    .button {
+        padding: .6rem 1rem;
+    }
+}
+
+.button:focus {
+    outline: none;
+    border: 2px solid #777;
+}
+
+.button:hover {
+    background-color: #9b59b6;
+    color: #fff;
+}

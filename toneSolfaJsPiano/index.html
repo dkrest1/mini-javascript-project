@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tone Solfa JS Piano</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Tone Solfa Javascript Piano</h1>
+
+        <div class="keys">
+            <div data-key="65" class="key odd-one">
+                <kbd>A</kbd>
+                <span class="solfa">DO</span>
+            </div>
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="solfa">RE</span>
+            </div>
+            <div data-key="68" class="key odd-two">
+                <kbd>D</kbd>
+                <span class="solfa">MI</span>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="solfa">FA</span>
+            </div>
+            <div data-key="71" class="key odd-three">
+                <kbd>G</kbd>
+                <span class="solfa">SOL</span>
+            </div>
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="solfa">LA</span>
+            </div>
+            <div data-key="74" class="key odd-four">
+                <kbd>J</kbd>
+                <span class="solfa">TI</span>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+                <span class="solfa">DOO</span>
+            </div>
+        </div>
+    
+        <!-- audio sounds -->
+        <audio data-key="65" src="sounds/do.mp3"></audio>
+        <audio data-key="83" src="sounds/re.mp3"></audio>
+        <audio data-key="68" src="sounds/mi.mp3"></audio>
+        <audio data-key="70" src="sounds/fa.mp3"></audio>
+        <audio data-key="71" src="sounds/sol.mp3"></audio>
+        <audio data-key="72" src="sounds/la.mp3"></audio>
+        <audio data-key="74" src="sounds/ti.mp3"></audio>
+        <audio data-key="75" src="sounds/doo.mp3"></audio>
+
+        <p class="copyright"><span class="copyright-ps">for better performance view with desktop or laptop</span> &copy; 2020 oluwatosin akande</p>
+    
+    </div>
+   
+    <script src="js/app.js"></script>
+</body>
+</html>

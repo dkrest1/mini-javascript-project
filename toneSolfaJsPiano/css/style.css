@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/congregation.jpeg');
+    background-position: top bottom;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 80px;
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+    font-size: 35px;
+    text-shadow: 0 1px 2px 4px rgba(0, 0, 0, .6);
+}
+
+.keys {
+    position: relative;
+    display: flex;
+    height: 300px;
+    width: 800px;
+    box-shadow: 0 2px 4px 8px rgba(0, 0, 0, .4);
+  
+}
+
+.key {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+    border-top: 8px solid #000;
+    border-bottom: 8px solid #000;
+    border-right: 8px solid #000;
+    transition: all .2s;
+}
+
+.odd-one {
+    border-left: 8px solid #000;
+}
+
+.playing {
+    border-top: 15px solid #000;
+    border-bottom: 15px solid #000;
+    border-right: 15px solid #000;
+}
+
+.key:nth-child(odd)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 120px;
+    width: 40px;
+    top: 0;
+    background-color: #000;
+    border-radius: 0 0 4px 4px;
+}
+
+.odd-one::after {
+    left: 76px;
+}
+
+.odd-two::after {
+    left: 277px;
+}
+
+.odd-three::after {
+    left: 478px;
+}
+
+.odd-four::after {
+    left: 678px;
+}
+
+kbd {
+    font-size: 35px;
+}
+
+.solfa {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.copyright-ps {
+    display: block;
+    font-style: italic;
+}
+

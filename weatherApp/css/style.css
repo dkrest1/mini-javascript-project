@@ -12,6 +12,7 @@
 body {
     background: linear-gradient(189deg, #4866cc 0%, #4866cc 60%, #f9fcfd 40%);
     background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     color: #000;
     font-family: 'open-sans', sans-serif;
@@ -29,7 +30,6 @@ body {
     font-style: italic;
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 10px;
     font-size: 35px;
     color: #fff;
     text-shadow: 0 1px 2px 4px rgba(0, 0, 0, .6);
@@ -112,4 +112,12 @@ body {
 .copyright {
     font-size: 16px;
     font-style: italic;
+    margin: -10px  0 10px 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .copyright {
+        margin-top: -20px;
+    }
+    
 }

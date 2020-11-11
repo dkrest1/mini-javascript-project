@@ -1,0 +1,115 @@
+/* google font*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: linear-gradient(189deg, #4866cc 0%, #4866cc 60%, #f9fcfd 40%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #000;
+    font-family: 'open-sans', sans-serif;
+
+}
+
+@media only screen and (max-width: 37.5em) {
+    body {
+        background: linear-gradient(189deg, #4866cc 0%, #4866cc 50%, #f9fcfd 50%);
+    }
+}
+
+
+.header {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 0 1px 2px 4px rgba(0, 0, 0, .6);
+
+}
+
+@media only screen and (max-width: 21.875em) {
+    .header {
+        font-size: 28px;
+    }
+}
+
+#weather-description {
+    font-size: 25px;
+    margin-top: -5px;
+}
+
+#weather-location {
+    color: #4866cc;
+}
+
+#weather-temperature {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+#weather-feelLike {
+    font-style: italic;
+}
+
+#max-min-temp {
+    text-align: center;
+
+}
+
+.max-temp {
+    margin-left: 14px;
+}
+
+.other-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#weather-humidity {
+    display: flex;
+    flex-direction: column;
+    padding-right: 8px;
+    border-right: .1px dotted #33333327;
+   
+}
+
+
+#weather-pressure {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: .1px dotted #3333332f;
+}
+
+#weather-cloud {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+}
+
+.size {
+    font-size: 18px;
+}
+
+
+.bg {
+    background-color: #d0eaf0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+}
+
+.copyright {
+    font-size: 16px;
+    font-style: italic;
+}

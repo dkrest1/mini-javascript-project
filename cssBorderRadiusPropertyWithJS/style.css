@@ -1,0 +1,85 @@
+:root {
+    --border-radius-top-right: 0%;
+    --border-radius-top-left: 0%;
+    --border-radius-bottom-left: 0%;
+    --border-radius-bottom-right: 0%;
+}
+
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+@media screen and (max-width: 31.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    background: linear-gradient(to right, #004e92, #000428);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 23.75em) {
+    body {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    .header {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 43.75em) {
+    .header {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 31.23em) {
+    .header {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+}
+@media screen and (max-width: 23.75em) {
+    .header {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.form-control {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.square-shape {
+    margin-top: 4rem;
+    height: 30rem;
+    width: 30rem;
+    border: 10px solid #fff;
+    border-radius: var(--border-radius-top-left) var(--border-radius-top-right) var(--border-radius-bottom-right) var(--border-radius-bottom-left);
+}
+
+.copyright {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}

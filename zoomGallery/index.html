@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Gallery with Javascript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #1e3c72 ,#2a5298);
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .header {
+            font-size: 40px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 34.375em) {
+            .header {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 25em) {
+            .header {
+                font-size: 20px;
+            }
+        }
+
+        .galleries {
+            position: relative;
+            margin-top: 70px;
+            height: 218px;
+            width: 320px;
+            border: 4px solid #fff;
+            background-color: #fff;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: auto;
+            grid-gap: 5px;
+            
+        }
+
+
+
+        .gallery {
+            height: 100px;
+            width: 100px;
+            transition: all .4s cubic-bezier(0,.46,.2,.95);
+        }
+
+        .gallery.zoom {
+            position: absolute;
+            height: 218px;
+            width: 320px;
+            margin-top: 70px;
+            transform: translate(-4px, -4px) scale(2);
+        }
+
+        @media screen and (max-width: 40.625em) {
+            .gallery.zoom {
+                height: 180px;
+                width: 250px;
+                transform: translate(11%, -10%) scale(2);
+            }
+        }
+
+        @media screen and (max-width: 34.375em) {
+            .gallery.zoom {
+                height: 130px;
+                width: 200px;
+                transform: translate(26%, -10%) scale(2);
+            }
+        }
+
+        @media screen and (max-width: 28.125em) {
+            .gallery.zoom {
+                height: 218px;
+                width: 320px;
+                transform: translate(-4px, -74px);
+            }
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+        }   
+
+        .btn {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            background-color: #06052994;
+            color: #fff;
+            cursor: pointer;
+            transition: all .4s cubic-bezier(0,.46,.2,.95);
+        }
+
+        .btn.zoom-back {
+            margin-top: 200px;
+        }
+
+        @media screen and (max-width: 40.625em){
+            .btn.zoom-back {
+                margin-top: 150px;
+            }
+            
+        }
+
+        @media screen and (max-width: 34.375em){
+            .btn.zoom-back {
+                margin-top: 80px;
+            }
+            
+        }
+
+        @media screen and (max-width: 28.125em){
+            .btn.zoom-back {
+                margin-top: 40px;
+            }
+            
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn:active {
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="header">Zoom Gallery with Javascript</h1>
+    <div class="galleries">
+        <div class="gallery">
+            <img src="img/house-1.jpg" alt="house 1" class="img">
+        </div>
+        <div class="gallery">
+            <img src="img/house-2.jpg" alt="house 2" class="img">
+        </div>
+        <div class="gallery">
+            <img src="img/house-3.jpg" alt="house 3" class="img">
+        </div>
+        <div class="gallery">
+            <img src="img/house-4.jpg" alt="house 4" class="img">
+        </div>
+        <div class="gallery">
+            <img src="img/house-5.jpg" alt="house 5" class="img">
+        </div>
+       
+        <div class="gallery">
+            <img src="img/house-6.jpg" alt="house 6" class="img">
+        </div> 
+    </div>
+    <button class="btn">back</button>
+
+
+    <script>
+        const galleries = document.querySelectorAll('.gallery');
+        const btn = document.querySelector('.btn')
+
+        galleries.forEach((gallery) => {
+            gallery.addEventListener('click', zoomImg);
+
+        }) 
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            galleries.forEach((gallery) => {
+                gallery.classList.remove('zoom');
+                btn.classList.remove('zoom-back')
+            })
+
+        })  
+
+        function zoomImg() {
+          this.classList.toggle('zoom');
+          btn.classList.toggle('zoom-back')
+  
+        }
+    </script>
+    
+</body>
+</html>
